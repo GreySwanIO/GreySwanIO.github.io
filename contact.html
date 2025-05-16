@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Grey Swan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Grey Swan</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="approach.html">Our Approach</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main-content">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help secure your smart contracts. Reach out to discuss your project needs or to request an audit.</p>
+
+            <div class="contact-form">
+                <form action="submit_form.php" method="POST"> <!- You'll need a backend script for form submission -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="project">Project Name/Description (Optional):</label>
+                    <input type="text" id="project" name="project">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-details">
+                <h2>Other Ways to Reach Us:</h2>
+                <p><strong>Email:</strong> <a href="mailto:contact@greyswan.audit">contact@greyswan.audit</a> (Placeholder)</p>
+                <p><strong>Secure Communication (e.g., Keybase/Signal):</strong> Please inquire for details.</p>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Grey Swan. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

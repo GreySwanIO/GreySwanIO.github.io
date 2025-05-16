@@ -1,0 +1,296 @@
+/* Global Resets & Basic Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* A clean, common sans-serif font */
+    background-color: #FFFFFF; /* White background */
+    color: #333333; /* Dark grey text for readability */
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #555555;
+    margin-bottom: 0.8em;
+}
+
+h1 {
+    font-size: 2.8em;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1.05em;
+}
+
+a {
+    color: #555555;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #999999; /* Lighter grey for hover */
+}
+
+/* Header & Navigation */
+header {
+    padding: 1em 0;
+    border-bottom: 2px solid #aaaaaa; /* Dark grey border */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #cccccc;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #555555;
+    font-size: 1.1em;
+    padding-bottom: 5px; /* Space for active border */
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: #777777;
+}
+
+/* Hero Section (Home Page) */
+#hero {
+    background-color: #f4f4f4; /* Light grey background for hero */
+    color: #333333;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#hero h1 {
+    margin-bottom: 0.5em;
+    color: #000000;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #000000; /* Black button */
+    color: #FFFFFF;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333333; /* Darker grey on hover */
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    background-color: #FFFFFF; /* White button */
+    color: #000000; /* Black text */
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #000000; /* Black border */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+}
+
+.cta-button-secondary:hover {
+    background-color: #f0f0f0; /* Very light grey on hover */
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/* Intro Section (Home Page) */
+#intro {
+    padding: 60px 0;
+    text-align: center;
+}
+#intro .container {
+    max-width: 800px;
+}
+#intro h2 {
+    margin-bottom: 1em;
+}
+
+/* Main Content Section (Other Pages) */
+#main-content {
+    padding: 50px 0;
+}
+
+#main-content h1 {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.feature, .team-member, .service-item {
+    background-color: #f9f9f9; /* Very light grey for feature boxes */
+    border-left: 5px solid #333333; /* Dark grey accent border */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 0 5px 5px 0;
+}
+
+.feature h3, .team-member h3, .service-item h3 {
+    margin-top: 0;
+    color: #000000;
+}
+
+/* Contact Form */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto 40px auto; /* Center the form */
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc; /* Light grey border */
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #FFFFFF;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+    align-self: flex-start; /* Align button to the left */
+}
+
+.contact-details {
+    text-align: center;
+    margin-top: 40px;
+}
+.contact-details p {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+.contact-details a {
+    color: #000000; /* Black for email link, consistent */
+}
+.contact-details a:hover {
+    color: #555555;
+}
+
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #777777;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments (simple example) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block; /* Make links take full width for easier tapping */
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    #hero {
+        padding: 50px 0;
+    }
+    #intro {
+        padding: 40px 0;
+    }
+    #main-content {
+        padding: 30px 0;
+    }
+
+    .contact-form form {
+        padding: 20px;
+    }
+}
