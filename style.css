@@ -39,7 +39,7 @@ p {
 }
 
 a {
-    color: #555555;
+    color: #aaaaff;
     text-decoration: none;
 }
 
@@ -50,6 +50,7 @@ a:hover {
 /* Header & Navigation */
 header {
     padding: 1em 0;
+    margin-bottom: 0;
     border-bottom: 2px solid #aaaaaa; /* Dark grey border */
 }
 
@@ -238,7 +239,9 @@ footer {
     color: #777777;
     text-align: center;
     padding: 25px 0;
-    margin-top: 40px;
+    margin-top: 0;
+    border-top: 2px solid #aaaaaa; /* Dark grey border */
+
 }
 
 footer p {

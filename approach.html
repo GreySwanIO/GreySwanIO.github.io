@@ -14,8 +14,6 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="approach.html" class="active">Our Approach</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -24,30 +22,29 @@
 
     <section id="main-content">
         <div class="container">
-            <h1>Our Novel Audit Methodology</h1>
-            <p>At Grey Swan, we've pioneered an audit process that integrates the rigor of sound static analysis with the nuanced understanding of seasoned security experts. This allows us to establish and verify properties specific to your smart contracts, approaching the thoroughness of formal verification without the prohibitive costs.</p>
+          <h1>Our Audit Approach</h1>
 
-            <h2>Key Pillars of Our Approach:</h2>
-            
-            <div class="feature">
-                <h3>1. Expert-Guided Static Analysis</h3>
-                <p>Our process begins with advanced static analysis tools, many developed from our team's academic research. However, tools alone are not enough. Our expert auditors guide this analysis, defining relevant properties and interpreting results to uncover subtle vulnerabilities that automated tools might miss.</p>
-            </div>
+	  <div class="feature">
+            <h3>Classic Audit Engagement</h3>
+            <p>Each engagement includes a classic audit in which we scour your code for all known vulnerabilities.</p>
+          </div>
 
-            <div class="feature">
-                <h3>2. Contract-Specific Property Verification</h3>
-                <p>Instead of generic checklists, we work to understand the intended behavior of your specific smart contract. We then formulate and verify properties that ensure your contract behaves as designed and is free from critical vulnerabilities. This tailored approach provides a deeper level of assurance.</p>
-            </div>
+          <div class="feature">
+            <h3>Customized Static Analysis Tools</h3>
+            <p>For each engagement, we develop and deploy sound static analysis tools customized to your codebase to offer assurances specific to your code.</p>
+          </div>
 
-            <div class="feature">
-                <h3>3. Cost-Effective Formal Verification Principles</h3>
-                <p>We apply principles from formal verification to bring a higher degree of mathematical certainty to your audit. By focusing on critical properties and leveraging efficient analysis techniques, we deliver this enhanced assurance at a significantly lower cost than traditional formal verification methods.</p>
-            </div>
+	  <h2>Our Static Analysis Approach</h2>
 
-            <div class="feature">
-                <h3>4. Comprehensive Reporting & Remediation Support</h3>
-                <p>Our audit reports are clear, concise, and actionable. We detail all findings, explain their potential impact, and provide concrete recommendations for remediation. We also offer post-audit support to ensure vulnerabilities are correctly addressed.</p>
-            </div>
+	  <p>
+	    Broadly speaking, static analysis tools come in two flavors, depending on the kind of guarantees they can provide.
+	    <i>Complete</i> tools are adept at finding bugs and guarantee that any malfeasance they detect is a genuine bug, making them ideal for non-expert end users.
+	    However, complete tools are in general unable to demonstrate that particular bugs don't exist—they exhibit false negatives.
+	    <i>Sound</i> tools, in contrast, are adept at demonstrating that particular classes of bugs do not exist.
+	    Like a typechecker, they rule out misbehavior before the program ever runs—misbehavior specific to your program.
+	    However, this strong guarantee comes at a cost: sound tools can raise false positives, which can be difficult to identify as such.
+	    This particular feature makes them ideal for use by expert auditors.
+	  </p>
         </div>
     </section>
 
