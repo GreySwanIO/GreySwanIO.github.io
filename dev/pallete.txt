@@ -1,0 +1,14 @@
+https://coolors.co/palette/353535-3c6e71-ffffff-d9d9d9-284b63
+
+
+#353535
+#3C6E71
+#FFFFFF
+#D9D9D9
+#284B63
+
+hsl(0, 0, 21)
+hsl(183, 31, 34)
+hsl(0, 0, 100)
+hsl(0, 0, 85)
+hsl(204, 42, 27)
