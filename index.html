@@ -1,37 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grey Swan</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grey Swan Security</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Cormorant+Garamond'>
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+  <link rel="stylesheet" href='styles/custom.css'>
+   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">Grey Swan</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="approach.html">Our Approach</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section id="hero">
-        <div class="container">
-          <h1>Web3 Security Audit Services</h1>
-          <p>Classical audits combined with tools customized for your codebase.</p>
-	  <p><a href="approach.html">Learn more</a> about our approach or <a href="contact.html">request our services.</p>
-        </div>
-    </section>
+<body id="body">
 
-    <footer>
+  <!-- Hero Section  -->
+  <section class="hero is-large">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
         <div class="container">
-            <p>&copy; 2025 Grey Swan. All rights reserved.</p>
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <h1 class="is-size-2 garamond">Grey Swan</h1>
+            </a>
+          </div>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <!-- <div class="navbar-end">
+              <a class="navbar-item">About</a>
+              <a class="navbar-item">Documentation</a>
+            </div> -->
+          </div>
         </div>
-    </footer>
+      </nav>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title is-2">Security should be more than proof-of-work</p>
+        <!-- <p class="subtitle is-4">Formal methods that can prove properties, not just scan for bugs</p> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section is-medium">
+    <div class="container">
+      <div class="has-text-centered mb-6">
+        <h2 class="title is-2">Our Philosophy</h2>
+        <p></p>
+      </div>
+
+      <div class="columns is-centered">
+
+        <div class="column is-one-third">
+          <div class="box has-text-centered">
+            <h4 class="title is-4">Lightweight Formal Methods</h4>
+            <p>User custody, ERC compliance, and many other properties can be proven, not just reviewed.</p>
+          </div>
+        </div>
+
+        <div class="column is-one-third">
+          <div class="box has-text-centered">
+            <h4 class="title is-4">Well-Equipped Industry Experts</h4>
+            <p>Custom static analysis tools to describe codebases allows auditors to easily understand the system and focus on the
+              issues</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+  <!-- Email Us Section -->
+  <section class="section is-medium">
+    <div class="container has-text-centered">
+      <h2 class="title is-2">Get in Touch</h2>
+      <span class="icon-text is-size-4">
+        <span class="icon">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span> <a href="mailto:info@greyswan.io">info@greyswan.io</a> </span>
+      </span>
+    </div>
+  </section>
+
+  <!-- Footer  -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+
+    </div>
+  </footer>
+
 </body>
+
 </html>

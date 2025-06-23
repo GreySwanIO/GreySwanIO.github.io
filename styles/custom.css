@@ -12,6 +12,13 @@
   --bulma-primary-15-l: 16%;
   --bulma-primary-20-l: 21%;
 }
+
 .garamond {
   font-family: "Cormorant Garamond";
+}
+
+#body {
+  background: radial-gradient(circle closest-corner at 0% 50%, var(--bulma-primary) 0%, #0000ff00 100%), 
+              radial-gradient(circle farthest-corner at 100% 0%, #712ad5b3 0%, #0000ff00 100%), 
+              radial-gradient(circle farthest-corner at 50% 100%, #ec9ef5ff 0% 0%, #a6a5f3ff 50%, #42a1ffff 100%);
 }
