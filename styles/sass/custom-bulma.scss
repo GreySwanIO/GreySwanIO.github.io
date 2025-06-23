@@ -9,7 +9,12 @@ $white:#FFFFFF;
 @use "bulma/sass" with (
   $family-primary:'"Poppins", sans-serif',
   $primary: $dark-cyan,
-  $link: $dark-blue
+  $link: $light-gray
+  // $light-gray: $light-gray,
+  // $dark-gray: $dark-gray,
+  // $dark-cyan: $dark-cyan,
+  // $dark-blue: $dark-blue,
+  // $white: $white,
 );
 
 // Import the Google Font
