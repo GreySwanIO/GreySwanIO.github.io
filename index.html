@@ -1,239 +1,472 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grey Swan | Smart Contract Audits</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles/css/custom-tailwind.css">
-  <style>
-    /* * ---------------------------------------------------
-         * PALETTE & STYLE CONFIGURATION
-         * ---------------------------------------------------
-         * This website uses Tailwind CSS for styling. You can
-         * easily change the theme by modifying the classes below.
-         *
-         * -- Primary Background: 'bg-slate-900'
-         * -- Content Background: 'bg-slate-800'
-         * -- Text (Primary):     'text-slate-200'
-         * -- Text (Secondary):   'text-slate-400'
-         * -- Accent Color:       'blue-500' (Used for gradients, borders, links)
-         *
-         * You can find colors here: https://tailwindcss.com/docs/customizing-colors
-         * ---------------------------------------------------
-        */
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0f172a;
-      /* bg-slate-900 */
-    }
-
-    /* Subtle glow effect for hero section */
-    .hero-glow {
-      background-image: radial-gradient(ellipse 50% 30% at 50% 40%, rgba(29, 78, 216, 0.15), transparent);
-    }
-
-    /* Section transition fade effect */
-    .section-fade {
-      -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    }
-  </style>
+  {/* Add Bulma CSS directly via link tag */}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./globals.css">
 </head>
 
-<body class="text-slate-200 antialiased">
+<body>
 
-  <!-- Main Container -->
-  <div id="main-content" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- ===== HERO SECTION ===== -->
-    <header class="h-screen min-h-[600px] flex flex-col justify-center items-center text-center relative hero-glow">
-      <div class="w-full">
-        <h1
-          class="text-6xl md:text-8xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-br from-white to-slate-400">
-          Grey Swan
-        </h1>
-        <p id="tagline" class="mt-4 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto"></p>
+  <div className="grey-swan-landing">
+    {/* Navigation */}
+    <nav className="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+      <div className="container">
+        <div className="navbar-brand">
+          <Link href="/" className="navbar-item">
+          <div className="is-flex is-align-items-center">
+            <Shield className="mr-2" size={24} />
+            <span className="has-text-weight-bold is-size-4">GREY SWAN</span>
+          </div>
+          </Link>
+          <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarMenu" className="navbar-menu">
+          <div className="navbar-end">
+            <Link href="#services" className="navbar-item">
+            Services
+            </Link>
+            <Link href="#about" className="navbar-item">
+            About
+            </Link>
+            <Link href="#team" className="navbar-item">
+            Team
+            </Link>
+            <Link href="#contact" className="navbar-item">
+            Contact
+            </Link>
+            <div className="navbar-item">
+              <div className="buttons">
+                <a className="button is-primary">
+                  <strong>Get Started</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="#about" class="absolute bottom-12 text-slate-500 animate-bounce">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </a>
-    </header>
+    </nav>
 
-    <!-- ===== SECTIONS CONTAINER ===== -->
-    <!-- This container uses spacing-y to separate the sections -->
-    <div class="space-y-32 md:space-y-48 my-24">
-
-      <!-- ===== ABOUT SECTION ===== -->
-      <section id="about" class="text-center section-fade">
-        <h2 class="section-title text-3xl font-bold tracking-tight md:text-4xl" data-content-key="about.title"></h2>
-        <p class="section-text mt-6 max-w-3xl mx-auto text-lg leading-8 text-slate-400" data-content-key="about.text">
-        </p>
-      </section>
-
-      <!-- ===== SERVICES SECTION ===== -->
-      <section id="services">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <!-- Service cards will be injected here by JavaScript -->
-        </div>
-      </section>
-
-      <!-- ===== METHODOLOGY SECTION ===== -->
-      <section id="methodology" class="section-fade">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 class="section-title text-3xl font-bold tracking-tight md:text-4xl"
-              data-content-key="methodology.title"></h2>
-            <p class="section-text mt-6 text-lg leading-8 text-slate-400" data-content-key="methodology.text"></p>
-          </div>
-          <div id="methodology-steps" class="space-y-6">
-            <!-- Methodology steps will be injected here -->
+    {/* Hero Section */}
+    <section className="hero is-medium is-dark">
+      <div className="hero-body">
+        <div className="container">
+          <div className="columns is-vcentered">
+            <div className="column is-6">
+              <h1 className="title is-1 has-text-weight-bold">Securing the Future of Digital Assets</h1>
+              <h2 className="subtitle is-4 mt-4 mb-6">
+                Enterprise-grade security solutions for blockchain and cryptocurrency infrastructure
+              </h2>
+              <div className="buttons">
+                <a href="#contact" className="button is-primary is-medium">
+                  Request a Consultation
+                </a>
+                <a href="#services" className="button is-light is-medium">
+                  Our Solutions
+                </a>
+              </div>
+            </div>
+            <div className="column is-6">
+              <div className="has-text-centered">
+                <Image src="/placeholder.svg?height=400&width=500" alt="Crypto Security Illustration" width={500}
+                  height={400} className="hero-image" />
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <!-- ===== CONTACT FOOTER ===== -->
-    <footer class="text-center py-24 sm:py-32">
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tight" data-content-key="contact.title"></h2>
-      <p class="mt-6 text-lg md:text-xl text-slate-400" data-content-key="contact.subtitle"></p>
-      <a href="mailto:info@greyswan.io"
-        class="mt-10 inline-block rounded-md bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors duration-200">
-        info@greyswan.io
-      </a>
+    {/* Services Section */}
+    <section id="services" className="section">
+      <div className="container">
+        <div className="has-text-centered mb-6">
+          <h2 className="title is-2">Our Security Solutions</h2>
+          <p className="subtitle is-5 has-text-grey">Comprehensive protection for your digital assets</p>
+        </div>
+
+        <div className="columns is-multiline mt-6">
+          <div className="column is-4">
+            <div className="box has-text-centered has-background-white-ter h-100">
+              <div className="icon-wrapper mb-4">
+                <Lock size={48} className="has-text-primary" />
+              </div>
+              <h3 className="title is-4">Wallet Security</h3>
+              <p className="has-text-grey-dark">
+                Multi-signature wallet solutions with advanced encryption and authentication protocols to secure your
+                digital assets.
+              </p>
+            </div>
+          </div>
+
+          <div className="column is-4">
+            <div className="box has-text-centered has-background-white-ter h-100">
+              <div className="icon-wrapper mb-4">
+                <Shield size={48} className="has-text-primary" />
+              </div>
+              <h3 className="title is-4">Smart Contract Audits</h3>
+              <p className="has-text-grey-dark">
+                Comprehensive security audits of smart contracts to identify vulnerabilities before deployment.
+              </p>
+            </div>
+          </div>
+
+          <div className="column is-4">
+            <div className="box has-text-centered has-background-white-ter h-100">
+              <div className="icon-wrapper mb-4">
+                <Database size={48} className="has-text-primary" />
+              </div>
+              <h3 className="title is-4">Cold Storage Solutions</h3>
+              <p className="has-text-grey-dark">
+                Secure offline storage systems for long-term asset protection with redundant backup protocols.
+              </p>
+            </div>
+          </div>
+
+          <div className="column is-4">
+            <div className="box has-text-centered has-background-white-ter h-100">
+              <div className="icon-wrapper mb-4">
+                <Server size={48} className="has-text-primary" />
+              </div>
+              <h3 className="title is-4">Infrastructure Security</h3>
+              <p className="has-text-grey-dark">
+                Hardened node infrastructure with DDoS protection and advanced monitoring systems.
+              </p>
+            </div>
+          </div>
+
+          <div className="column is-4">
+            <div className="box has-text-centered has-background-white-ter h-100">
+              <div className="icon-wrapper mb-4">
+                <Users size={48} className="has-text-primary" />
+              </div>
+              <h3 className="title is-4">Security Training</h3>
+              <p className="has-text-grey-dark">
+                Comprehensive training programs for your team on best security practices in the crypto space.
+              </p>
+            </div>
+          </div>
+
+          <div className="column is-4">
+            <div className="box has-text-centered has-background-white-ter h-100">
+              <div className="icon-wrapper mb-4">
+                <Mail size={48} className="has-text-primary" />
+              </div>
+              <h3 className="title is-4">Incident Response</h3>
+              <p className="has-text-grey-dark">
+                24/7 rapid response team to address security breaches and minimize potential damage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* About Section */}
+    <section id="about" className="section has-background-light">
+      <div className="container">
+        <div className="columns is-vcentered">
+          <div className="column is-5">
+            <Image src="/placeholder.svg?height=400&width=400" alt="About Grey Swan" width={400} height={400}
+              className="about-image" />
+          </div>
+          <div className="column is-7">
+            <h2 className="title is-2">About Grey Swan</h2>
+            <p className="subtitle is-5 has-text-grey mb-5">
+              Protecting digital assets with military-grade security solutions
+            </p>
+            <div className="content is-medium">
+              <p>
+                Grey Swan was founded in 2018 by a team of cybersecurity experts and blockchain specialists with a
+                mission to bring enterprise-grade security to the cryptocurrency ecosystem.
+              </p>
+              <p>
+                Our approach combines traditional security principles with innovative solutions designed specifically
+                for blockchain technology. We understand that in the rapidly evolving world of digital assets,
+                security cannot be an afterthought.
+              </p>
+              <p>
+                With a team comprised of former intelligence agency professionals, ethical hackers, and blockchain
+                developers, we offer a unique perspective on securing your most valuable digital assets.
+              </p>
+            </div>
+            <div className="mt-5">
+              <a href="#contact" className="button is-primary is-medium">
+                Learn More About Our Approach
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Team Section */}
+    <section id="team" className="section">
+      <div className="container">
+        <div className="has-text-centered mb-6">
+          <h2 className="title is-2">Our Security Experts</h2>
+          <p className="subtitle is-5 has-text-grey">Meet the team securing the future of digital assets</p>
+        </div>
+
+        <div className="columns is-multiline">
+          <div className="column is-3">
+            <div className="card">
+              <div className="card-image">
+                <figure className="image is-4by3">
+                  <Image src="/placeholder.svg?height=300&width=400" alt="Team Member" width={400} height={300}
+                    className="team-image" />
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <p className="title is-4">Sarah Chen</p>
+                    <p className="subtitle is-6">Chief Security Officer</p>
+                  </div>
+                </div>
+                <div className="content">
+                  Former cybersecurity lead at a major financial institution with 15+ years of experience in threat
+                  detection and prevention.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="column is-3">
+            <div className="card">
+              <div className="card-image">
+                <figure className="image is-4by3">
+                  <Image src="/placeholder.svg?height=300&width=400" alt="Team Member" width={400} height={300}
+                    className="team-image" />
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <p className="title is-4">Michael Rodriguez</p>
+                    <p className="subtitle is-6">Blockchain Security Specialist</p>
+                  </div>
+                </div>
+                <div className="content">
+                  Smart contract auditor who has secured over $2 billion in crypto assets through vulnerability
+                  assessments.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="column is-3">
+            <div className="card">
+              <div className="card-image">
+                <figure className="image is-4by3">
+                  <Image src="/placeholder.svg?height=300&width=400" alt="Team Member" width={400} height={300}
+                    className="team-image" />
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <p className="title is-4">David Okonkwo</p>
+                    <p className="subtitle is-6">Infrastructure Lead</p>
+                  </div>
+                </div>
+                <div className="content">
+                  Expert in secure node infrastructure with experience building systems for major cryptocurrency
+                  exchanges.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="column is-3">
+            <div className="card">
+              <div className="card-image">
+                <figure className="image is-4by3">
+                  <Image src="/placeholder.svg?height=300&width=400" alt="Team Member" width={400} height={300}
+                    className="team-image" />
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <p className="title is-4">Elena Petrov</p>
+                    <p className="subtitle is-6">Cryptography Expert</p>
+                  </div>
+                </div>
+                <div className="content">
+                  PhD in Applied Cryptography with multiple patents in secure key management systems for digital
+                  assets.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Contact Section */}
+    <section id="contact" className="section has-background-grey-lighter">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-5">
+            <h2 className="title is-2">Get in Touch</h2>
+            <p className="subtitle is-5 has-text-grey mb-5">Schedule a security consultation with our team</p>
+            <div className="content is-medium">
+              <p>
+                Our security experts are ready to help you assess your current infrastructure and develop a
+                comprehensive security strategy tailored to your needs.
+              </p>
+              <p>
+                Whether you're a startup looking to secure your first token offering or an established exchange
+                seeking to enhance your security posture, we have the expertise to help.
+              </p>
+            </div>
+            <div className="info-items mt-6">
+              <div className="is-flex mb-4">
+                <span className="icon has-text-primary mr-3">
+                  <Mail size={24} />
+                </span>
+                <span>contact@greyswan.com</span>
+              </div>
+              <div className="is-flex">
+                <span className="icon has-text-primary mr-3">
+                  <Shield size={24} />
+                </span>
+                <span>For emergency response: +1 (888) 555-0123</span>
+              </div>
+            </div>
+          </div>
+          <div className="column is-7">
+            <div className="box">
+              <form>
+                <div className="field">
+                  <label className="label">Name</label>
+                  <div className="control">
+                    <input className="input" type="text" placeholder="Your name" />
+                  </div>
+                </div>
+
+                <div className="field">
+                  <label className="label">Email</label>
+                  <div className="control">
+                    <input className="input" type="email" placeholder="Your email" />
+                  </div>
+                </div>
+
+                <div className="field">
+                  <label className="label">Company</label>
+                  <div className="control">
+                    <input className="input" type="text" placeholder="Your company" />
+                  </div>
+                </div>
+
+                <div className="field">
+                  <label className="label">Service Interested In</label>
+                  <div className="control">
+                    <div className="select is-fullwidth">
+                      <select>
+                        <option>Select a service</option>
+                        <option>Wallet Security</option>
+                        <option>Smart Contract Audits</option>
+                        <option>Cold Storage Solutions</option>
+                        <option>Infrastructure Security</option>
+                        <option>Security Training</option>
+                        <option>Incident Response</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="field">
+                  <label className="label">Message</label>
+                  <div className="control">
+                    <textarea className="textarea" placeholder="How can we help you?"></textarea>
+                  </div>
+                </div>
+
+                <div className="field">
+                  <div className="control">
+                    <button className="button is-primary is-fullwidth">Submit Request</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Footer */}
+    <footer className="footer has-background-dark has-text-white">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-4">
+            <div className="is-flex is-align-items-center mb-4">
+              <Shield className="mr-2" size={24} />
+              <span className="has-text-weight-bold is-size-4">GREY SWAN</span>
+            </div>
+            <p>
+              Securing the future of digital assets with enterprise-grade security solutions for the blockchain
+              ecosystem.
+            </p>
+          </div>
+          <div className="column is-2">
+            <h3 className="has-text-weight-bold mb-4">Company</h3>
+            <ul className="footer-links">
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#team">Team</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div className="column is-2">
+            <h3 className="has-text-weight-bold mb-4">Services</h3>
+            <ul className="footer-links">
+              <li>
+                <a href="#services">Wallet Security</a>
+              </li>
+              <li>
+                <a href="#services">Smart Contract Audits</a>
+              </li>
+              <li>
+                <a href="#services">Cold Storage</a>
+              </li>
+              <li>
+                <a href="#services">Training</a>
+              </li>
+            </ul>
+          </div>
+          <div className="column is-4">
+            <h3 className="has-text-weight-bold mb-4">Stay Updated</h3>
+            <p className="mb-4">Subscribe to our newsletter for the latest security insights</p>
+            <div className="field has-addons">
+              <div className="control is-expanded">
+                <input className="input" type="email" placeholder="Your email" />
+              </div>
+              <div className="control">
+                <a className="button is-primary">Subscribe</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="has-text-centered mt-6 pt-6 has-border-top">
+          <p>© {new Date().getFullYear()} Grey Swan Security. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
   </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-
-      /*
-       * ---------------------------------------------------
-       * WEBSITE CONTENT CONFIGURATION
-       * ---------------------------------------------------
-       * All text content is managed here. You can easily
-       * edit the copy, add or remove taglines, services,
-       * and methodology steps.
-       * ---------------------------------------------------
-      */
-      const content = {
-        taglines: [
-          "Security beyond the surface.",
-          "Clarity in complexity. Confidence in code.",
-          "The silent partner in your protocol's security.",
-          "Building a more resilient Web3.",
-          "Audits should be more than proof-of-work.",
-          "Anticipating the unpredictable.",
-          "From bytecode to bedrock security.",
-          "Your protocol, fortified.",
-          "Securing the future of decentralized finance.",
-          "Independent assurance for a trustless world.",
-          "We find the edge cases so you don't have to.",
-          "More signal, less noise.",
-        ],
-        about: {
-          title: "Beyond the Checklist",
-          text: "At Grey Swan, we see smart contract audits as a deep, collaborative investigation. We go beyond automated tools and surface-level checks to understand the core logic and economic incentives of your protocol, identifying the subtle, high-impact risks that others miss."
-        },
-        services: [
-          {
-            title: "Protocol Audits",
-            description: "Full-scope security analysis of your smart contract architecture, from core logic to tokenomics."
-          },
-          {
-            title: "Pre-Launch Review",
-            description: "A focused audit for protocols preparing for mainnet, ensuring a secure and smooth launch."
-          },
-          {
-            title: "Continuous Audit",
-            description: "Ongoing security partnership for evolving protocols, providing assurance through every upgrade."
-          }
-        ],
-        methodology: {
-          title: "Our Approach",
-          text: "Our process combines adversarial thinking with rigorous analysis. We dissect your system to uncover not just what is, but what could be.",
-          steps: [
-            "Architectural Review",
-            "Economic Model Analysis",
-            "Manual Code Review",
-            "Exploit Scenario Modeling",
-            "Comprehensive Reporting"
-          ]
-        },
-        contact: {
-          title: "Ready to Secure Your Protocol?",
-          subtitle: "Let's build a safer ecosystem together."
-        }
-      };
-
-      // --- Function to set the hourly tagline ---
-      function setHourlyTagline() {
-        const taglineElement = document.getElementById('tagline');
-        if (taglineElement) {
-          const hour = new Date().getHours();
-          const taglineIndex = hour % content.taglines.length;
-          taglineElement.textContent = content.taglines[taglineIndex];
-        }
-      }
-
-      // --- Function to inject content from the object ---
-      function populateContent() {
-        // Populate simple text fields
-        document.querySelectorAll('[data-content-key]').forEach(el => {
-          const key = el.getAttribute('data-content-key');
-          const [section, prop] = key.split('.');
-          if (content[section] && content[section][prop]) {
-            el.textContent = content[section][prop];
-          }
-        });
-
-        // Populate services
-        const servicesContainer = document.getElementById('services');
-        if (servicesContainer) {
-          content.services.forEach(service => {
-            const serviceCard = `
-                            <div class="p-8 bg-slate-800/50 rounded-lg shadow-lg border border-slate-700/50">
-                                <h3 class="text-xl font-bold text-white">${service.title}</h3>
-                                <p class="mt-2 text-slate-400">${service.description}</p>
-                            </div>
-                        `;
-            servicesContainer.innerHTML += serviceCard;
-          });
-        }
-
-        // Populate methodology steps
-        const methodologyContainer = document.getElementById('methodology-steps');
-        if (methodologyContainer) {
-          content.methodology.steps.forEach(step => {
-            const stepItem = `
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-blue-600/20 text-blue-400 rounded-full h-8 w-8 flex items-center justify-center border border-blue-500/30">
-                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                                </div>
-                                <p class="ml-4 text-lg text-slate-300">${step}</p>
-                            </div>
-                        `;
-            methodologyContainer.innerHTML += stepItem;
-          });
-        }
-      }
-
-      // --- Initial calls ---
-      setHourlyTagline();
-      populateContent();
-    });
-  </script>
 
 </body>
 
