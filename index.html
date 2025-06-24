@@ -1,86 +1,239 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grey Swan Security</title>
-  <link rel="stylesheet" href='styles/css/custom-bulma.css'>
-  <link rel="stylesheet" href='styles/css/styles.css'>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <title>Grey Swan | Smart Contract Audits</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/css/custom-tailwind.css">
+  <style>
+    /* * ---------------------------------------------------
+         * PALETTE & STYLE CONFIGURATION
+         * ---------------------------------------------------
+         * This website uses Tailwind CSS for styling. You can
+         * easily change the theme by modifying the classes below.
+         *
+         * -- Primary Background: 'bg-slate-900'
+         * -- Content Background: 'bg-slate-800'
+         * -- Text (Primary):     'text-slate-200'
+         * -- Text (Secondary):   'text-slate-400'
+         * -- Accent Color:       'blue-500' (Used for gradients, borders, links)
+         *
+         * You can find colors here: https://tailwindcss.com/docs/customizing-colors
+         * ---------------------------------------------------
+        */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      /* bg-slate-900 */
+    }
+
+    /* Subtle glow effect for hero section */
+    .hero-glow {
+      background-image: radial-gradient(ellipse 50% 30% at 50% 40%, rgba(29, 78, 216, 0.15), transparent);
+    }
+
+    /* Section transition fade effect */
+    .section-fade {
+      -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+  </style>
 </head>
 
-<body id="body">
+<body class="text-slate-200 antialiased">
 
-  <!-- Hero Section  -->
-  <section class="hero is-large">
-    <!-- Hero head: will stick at the top -->
-    <div class="hero-head">
-      <div class="container">
-        <h1 class="is-title is-size-2 garamond">Grey Swan</h1>
+  <!-- Main Container -->
+  <div id="main-content" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ===== HERO SECTION ===== -->
+    <header class="h-screen min-h-[600px] flex flex-col justify-center items-center text-center relative hero-glow">
+      <div class="w-full">
+        <h1
+          class="text-6xl md:text-8xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-br from-white to-slate-400">
+          Grey Swan
+        </h1>
+        <p id="tagline" class="mt-4 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto"></p>
       </div>
-    </div>
+      <a href="#about" class="absolute bottom-12 text-slate-500 animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </header>
 
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <p class="title is-2">Security should be more than proof-of-work.</p>
-        <!-- <p class="subtitle is-4">Formal methods that can prove properties, not just scan for bugs</p> -->
-      </div>
-    </div>
-  </section>
+    <!-- ===== SECTIONS CONTAINER ===== -->
+    <!-- This container uses spacing-y to separate the sections -->
+    <div class="space-y-32 md:space-y-48 my-24">
 
-  <!-- About Section -->
-  <section class="section is-medium">
-    <div class="container">
-      <div class="has-text-centered mb-6">
-        <h2 class="title is-2">Our Philosophy</h2>
-        <p></p>
-      </div>
+      <!-- ===== ABOUT SECTION ===== -->
+      <section id="about" class="text-center section-fade">
+        <h2 class="section-title text-3xl font-bold tracking-tight md:text-4xl" data-content-key="about.title"></h2>
+        <p class="section-text mt-6 max-w-3xl mx-auto text-lg leading-8 text-slate-400" data-content-key="about.text">
+        </p>
+      </section>
 
-      <div class="columns is-centered">
+      <!-- ===== SERVICES SECTION ===== -->
+      <section id="services">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <!-- Service cards will be injected here by JavaScript -->
+        </div>
+      </section>
 
-        <div class="column is-one-third">
-          <div class="box has-text-centered">
-            <h4 class="title is-4">Lightweight Formal Methods</h4>
-            <p>User custody, ERC compliance, and many other properties can be proven, not just reviewed.</p>
+      <!-- ===== METHODOLOGY SECTION ===== -->
+      <section id="methodology" class="section-fade">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="section-title text-3xl font-bold tracking-tight md:text-4xl"
+              data-content-key="methodology.title"></h2>
+            <p class="section-text mt-6 text-lg leading-8 text-slate-400" data-content-key="methodology.text"></p>
+          </div>
+          <div id="methodology-steps" class="space-y-6">
+            <!-- Methodology steps will be injected here -->
           </div>
         </div>
-
-        <div class="column is-one-third">
-          <div class="box has-text-centered">
-            <h4 class="title is-4">Well-Equipped Industry Experts</h4>
-            <p>Custom static analysis tools to describe codebases allow auditors to easily understand the system and focus on the
-              issues.</p>
-          </div>
-        </div>
-      </div>
-
-
-
+      </section>
     </div>
 
-  </section>
+    <!-- ===== CONTACT FOOTER ===== -->
+    <footer class="text-center py-24 sm:py-32">
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight" data-content-key="contact.title"></h2>
+      <p class="mt-6 text-lg md:text-xl text-slate-400" data-content-key="contact.subtitle"></p>
+      <a href="mailto:info@greyswan.io"
+        class="mt-10 inline-block rounded-md bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors duration-200">
+        info@greyswan.io
+      </a>
+    </footer>
+  </div>
 
-  <!-- Email Us Section -->
-  <section class="section is-medium">
-    <div class="container has-text-centered">
-      <h2 class="title is-2">More to come ...</h2>
-      <span class="icon-text is-size-4">
-        <span class="icon">
-          <i class="fas fa-envelope"></i>
-        </span>
-        <span> <a href="mailto:info@greyswan.io">info@greyswan.io</a> </span>
-      </span>
-    </div>
-  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
 
-  <!-- Footer  -->
-  <footer class="footer">
-    <div class="content has-text-centered">
+      /*
+       * ---------------------------------------------------
+       * WEBSITE CONTENT CONFIGURATION
+       * ---------------------------------------------------
+       * All text content is managed here. You can easily
+       * edit the copy, add or remove taglines, services,
+       * and methodology steps.
+       * ---------------------------------------------------
+      */
+      const content = {
+        taglines: [
+          "Security beyond the surface.",
+          "Clarity in complexity. Confidence in code.",
+          "The silent partner in your protocol's security.",
+          "Building a more resilient Web3.",
+          "Audits should be more than proof-of-work.",
+          "Anticipating the unpredictable.",
+          "From bytecode to bedrock security.",
+          "Your protocol, fortified.",
+          "Securing the future of decentralized finance.",
+          "Independent assurance for a trustless world.",
+          "We find the edge cases so you don't have to.",
+          "More signal, less noise.",
+        ],
+        about: {
+          title: "Beyond the Checklist",
+          text: "At Grey Swan, we see smart contract audits as a deep, collaborative investigation. We go beyond automated tools and surface-level checks to understand the core logic and economic incentives of your protocol, identifying the subtle, high-impact risks that others miss."
+        },
+        services: [
+          {
+            title: "Protocol Audits",
+            description: "Full-scope security analysis of your smart contract architecture, from core logic to tokenomics."
+          },
+          {
+            title: "Pre-Launch Review",
+            description: "A focused audit for protocols preparing for mainnet, ensuring a secure and smooth launch."
+          },
+          {
+            title: "Continuous Audit",
+            description: "Ongoing security partnership for evolving protocols, providing assurance through every upgrade."
+          }
+        ],
+        methodology: {
+          title: "Our Approach",
+          text: "Our process combines adversarial thinking with rigorous analysis. We dissect your system to uncover not just what is, but what could be.",
+          steps: [
+            "Architectural Review",
+            "Economic Model Analysis",
+            "Manual Code Review",
+            "Exploit Scenario Modeling",
+            "Comprehensive Reporting"
+          ]
+        },
+        contact: {
+          title: "Ready to Secure Your Protocol?",
+          subtitle: "Let's build a safer ecosystem together."
+        }
+      };
 
-    </div>
-  </footer>
+      // --- Function to set the hourly tagline ---
+      function setHourlyTagline() {
+        const taglineElement = document.getElementById('tagline');
+        if (taglineElement) {
+          const hour = new Date().getHours();
+          const taglineIndex = hour % content.taglines.length;
+          taglineElement.textContent = content.taglines[taglineIndex];
+        }
+      }
+
+      // --- Function to inject content from the object ---
+      function populateContent() {
+        // Populate simple text fields
+        document.querySelectorAll('[data-content-key]').forEach(el => {
+          const key = el.getAttribute('data-content-key');
+          const [section, prop] = key.split('.');
+          if (content[section] && content[section][prop]) {
+            el.textContent = content[section][prop];
+          }
+        });
+
+        // Populate services
+        const servicesContainer = document.getElementById('services');
+        if (servicesContainer) {
+          content.services.forEach(service => {
+            const serviceCard = `
+                            <div class="p-8 bg-slate-800/50 rounded-lg shadow-lg border border-slate-700/50">
+                                <h3 class="text-xl font-bold text-white">${service.title}</h3>
+                                <p class="mt-2 text-slate-400">${service.description}</p>
+                            </div>
+                        `;
+            servicesContainer.innerHTML += serviceCard;
+          });
+        }
+
+        // Populate methodology steps
+        const methodologyContainer = document.getElementById('methodology-steps');
+        if (methodologyContainer) {
+          content.methodology.steps.forEach(step => {
+            const stepItem = `
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-600/20 text-blue-400 rounded-full h-8 w-8 flex items-center justify-center border border-blue-500/30">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                                </div>
+                                <p class="ml-4 text-lg text-slate-300">${step}</p>
+                            </div>
+                        `;
+            methodologyContainer.innerHTML += stepItem;
+          });
+        }
+      }
+
+      // --- Initial calls ---
+      setHourlyTagline();
+      populateContent();
+    });
+  </script>
 
 </body>
 
