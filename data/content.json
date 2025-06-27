@@ -1,0 +1,14 @@
+{
+  "company-name": "Grey Swan",
+  "tagline": "Security that is more than proof-of-work",
+  "about":"We are blockchain security experts, specializing in lightweight, formal proofs of system properties. We aim to raise the security standard on-chain.",
+  "services": [
+    {"service":"Property Proofs", "description":"We can quickly build proofs (or counter-examples) of desired properties for smart contracts and protocols. User custody of funds, ERC compliance, address access privileges, etc. and do so automatically."},
+    {"service":"Protocol Audits", "description":"We provide world-class auditing and build reports that can say positive statements about the protocol."},
+    {"service":"Build-time Security Consulting", "description":"Don't just wait until the end for the flaw to be found."},
+    {"service":"Protocol Monitoring", "description":"Remove the difficulty of proposal due diligence by having our provers scan the system and report changes."}
+  ],
+  "team": "Right now we're a small team which comprises of an academic researcher and a long-time hacker/auditor.",
+  "careers": "We are not actively hiring at this time"
+
+}
