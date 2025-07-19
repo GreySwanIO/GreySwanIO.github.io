@@ -5,6 +5,11 @@
   },
   "scripts": {
     "build-bulma": "sass --load-path=node_modules styles/sass/custom-bulma.scss styles/css/custom-bulma.css",
+    "build-bulma-min": "sass --load-path=node_modules --style=compressed styles/sass/custom-bulma.scss styles/css/custom-bulma.min.css",
+    "build-css-min": "sass --style=compressed styles/css/styles.css styles/css/styles.min.css",
+    "build-min": "npm run build-bulma-min && npm run build-css-min",
+    "build-prod": "npm run build-min && node performance-audit.js",
+    "audit": "node performance-audit.js",
     "start": "npm run build-bulma -- --watch"
   }
 }

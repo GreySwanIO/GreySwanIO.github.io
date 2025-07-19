@@ -17,6 +17,5 @@ $white:#FFFFFF;
   // $white: $white,
 );
 
-// Import the Google Font
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+// Import the Google Font with optimized loading
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap");

@@ -1,0 +1,8 @@
+/* Minimal icon set to replace FontAwesome - reduces external dependencies */
+.icon-envelope::before,.icon-shield::before,.icon-tools::before,.icon-clock::before{font-style:normal;font-variant:normal;text-rendering:auto;-webkit-font-smoothing:antialiased;font-size:inherit;display:inline-block}
+.icon-envelope::before{content:"✉"}
+.icon-shield::before{content:"🛡"}
+.icon-tools::before{content:"🔧"}
+.icon-clock::before{content:"🕐"}
+.icon-lg{font-size:2em}
+.icon-wrapper{display:inline-flex;align-items:center;justify-content:center;width:1em;height:1em}
