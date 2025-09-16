@@ -1,0 +1,18 @@
+
+@font-face {
+  font-family: "Computer Modern";
+  src: 
+    local("Computer Modern"),
+    url("../assets/fonts/computer-modern/cmunss.ttf"),
+    url("../assets/fonts/computer-modern/cmunso.ttf"),
+    url("../assets/fonts/computer-modern/cmunsx.ttf");
+}
+
+
+.hoverable:hover {
+  color:pink;
+}
+
+* {
+  font-family: "Computer Modern"
+}
