@@ -19,6 +19,7 @@ body {
 
 h1 {
   font-weight: bold;
+  text-align: center;
 }
 
 a {
@@ -26,7 +27,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: pink;
+  color: purple;
 }
 
 .bottom-border {
@@ -36,3 +37,10 @@ a:hover {
 /* .links h3 {
   text-align: center;
 } */
+
+#contact {
+  margin: 10% auto auto auto;
+  text-align: center;
+  border-radius: 10px;
+  border: 5px solid black;
+}
