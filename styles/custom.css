@@ -8,11 +8,31 @@
     url("../assets/fonts/computer-modern/cmunsx.ttf");
 }
 
-
-.hoverable:hover {
-  color:pink;
-}
-
 * {
   font-family: "Computer Modern"
 }
+
+body {
+  width: 50%;
+  margin: auto;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: pink;
+}
+
+.bottom-border {
+  border-bottom: 5px solid black;
+}
+
+/* .links h3 {
+  text-align: center;
+} */
